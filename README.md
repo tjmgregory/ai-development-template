@@ -45,12 +45,8 @@ Read `AGENTS.md` before starting work. It covers:
 
 ### Claude Code Users
 
-Install the [beads skill](https://github.com/steveyegge/beads/tree/main/claude-plugin/skills/beads)
-for better issue tracking integration:
-
-```bash
-cp -r <path-to-beads>/claude-plugin/skills/beads ~/.claude/skills/
-```
+Install the [beads plugin](https://github.com/steveyegge/beads/tree/main/claude-plugin)
+for better issue tracking integration.
 
 ## License
 
