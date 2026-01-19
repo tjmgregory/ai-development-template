@@ -1,30 +1,32 @@
 # [Project Name]
 
-> [One-line description of what this project does]
+<!-- Brief description of what this project does -->
 
-## Quick Start
+## Getting Started
+
+<!-- Installation and setup instructions -->
 
 ```bash
-# [Installation/setup commands]
+# Example
+npm install
+npm run dev
 ```
 
-## Documentation
+## Usage
 
-This project follows the **AI Unified Process (AIUP)** methodology.
-
-- `AGENTS.md` - Guidelines for AI agents working on this project
-- `docs/aiup/` - Process documentation and artifacts
-
-## Project Status
-
-**Current Phase**: Inception
-
-See `docs/aiup/README.md` for detailed status and next steps.
+<!-- How to use the project -->
 
 ## Development
 
-[Add development instructions as the project evolves]
+This project follows the [AI Unified Process (AIUP)](docs/aiup/README.md) methodology.
+
+- **AI agents**: Read `AGENTS.md` at the start of each session
+- **Process docs**: See `docs/aiup/` for requirements, specifications, and project status
+
+## Contributing
+
+<!-- Contribution guidelines -->
 
 ## License
 
-[Choose appropriate license]
+<!-- License information -->

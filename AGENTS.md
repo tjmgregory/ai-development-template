@@ -79,10 +79,8 @@ This project uses **[INSERT TRACKER]** for issue tracking.
 
 <!--
 CUSTOMISE THIS SECTION based on your project needs.
-Link to any coding standards documents you create in docs/coding-standards/
+Add coding standards documents if your project requires them.
 -->
-
-See `docs/coding-standards/` for project-specific standards (if applicable).
 
 General principles:
 
