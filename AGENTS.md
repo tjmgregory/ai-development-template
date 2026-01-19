@@ -41,37 +41,66 @@ methodology where specifications drive code, not the reverse.
 
 ---
 
-## 2. Issue Tracking
+## 2. Issue Tracking with beads
 
-<!--
-CUSTOMISE THIS SECTION for your preferred tracking method.
-Options include:
-- beads (bd) - AI-friendly CLI tracker
-- GitHub Issues
-- Linear
-- Jira
-- Simple markdown TODOs (for solo/small projects)
+This project uses **beads (bd)** for all issue tracking. Do NOT use markdown TODOs or other
+tracking methods.
 
-Example beads setup:
--->
+### Setup (one-time)
 
-This project uses **[INSERT TRACKER]** for issue tracking.
+If beads isn't initialised yet:
+
+```bash
+bd init
+bd doctor --fix
+```
+
+For repos with a **protected main branch**, configure beads to sync on a separate branch:
+
+```bash
+bd config set sync_branch beads-sync
+```
 
 ### Quick Reference
 
 ```bash
 # Check what's ready to work on
-[command to list ready work]
+bd ready --json
 
 # Create new issue
-[command to create issue]
+bd create "Issue title" -t feature -p 1 --json
 
-# Update status
-[command to update status]
+# Claim a task (do this BEFORE starting work)
+bd update <id> --status in_progress --json
 
-# Complete work
-[command to close/complete]
+# Complete work (only after pushed to main)
+bd close <id> -r "Completed" --json
 ```
+
+### Issue Types & Priorities
+
+**Types**: `bug`, `feature`, `task`, `epic`, `chore`
+
+**Priorities**: `0` (critical) → `4` (backlog)
+
+### Dependencies
+
+Link related work:
+
+```bash
+bd create "Found bug" -p 1 --deps discovered-from:<parent-id> --json
+```
+
+### Important Rules
+
+- Always use `--json` flag for programmatic use
+- Claim tasks with `in_progress` before starting work
+- Only close issues after work is pushed to main
+- Do NOT commit `.beads/` files - beads manages its own sync
+
+### More Info
+
+Run `bd quickstart` or see [beads documentation](https://github.com/steveyegge/beads)
 
 ---
 
@@ -105,7 +134,7 @@ General principles:
 
 1. Read this file (AGENTS.md)
 2. Read `docs/aiup/README.md` for current project phase and artifacts
-3. Check for ready work in your issue tracker
+3. Check for ready work: `bd ready --json`
 4. Understand context before making changes
 
 ### During Work
@@ -126,4 +155,5 @@ General principles:
 ## References
 
 - [AI Unified Process](https://aiup.dev/) - Official AIUP documentation
+- [beads](https://github.com/steveyegge/beads) - Issue tracking
 - `docs/aiup/README.md` - Project-specific AIUP configuration
