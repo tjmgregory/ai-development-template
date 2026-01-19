@@ -1,7 +1,5 @@
 # Agent Guidelines
 
-**Read this document at the start of every session.**
-
 <!-- SETUP_NOTICE_START - Delete this block after setup is complete -->
 
 > **First time?** If `SETUP.md` exists in this repo, read and follow it first.
