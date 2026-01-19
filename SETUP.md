@@ -33,9 +33,32 @@ If the user said main is protected, also run:
 bd config set sync_branch beads-sync
 ```
 
-### 4. Create initial AIUP artifacts
+### 4. Choose artifacts
 
-Create the inception directory and `docs/aiup/01-inception/vision.md` with a placeholder:
+Walk through `docs/aiup/README.md` with the user to decide which artifacts they'll use.
+
+For each phase, review the artifact table and ask which ones apply to this project. Consider:
+
+- Project complexity (simple script vs multi-service system)
+- Team size (solo vs multiple contributors)
+- Domain complexity (well-understood vs novel)
+- Compliance/enterprise needs (audit trails, sign-offs)
+
+**At minimum**, most projects should use:
+
+- Vision
+- Requirements Catalogue
+- Acceptance Tests
+
+Update the "Artifacts in Use" checklist in `docs/aiup/README.md` to reflect their choices.
+
+This can evolve later - artifacts can be added as the project grows.
+
+### 5. Create inception directory
+
+Create `docs/aiup/01-inception/` for the inception artifacts.
+
+If Vision was selected (it usually is), create `docs/aiup/01-inception/vision.md`:
 
 ```markdown
 # Vision
@@ -63,13 +86,14 @@ Create the inception directory and `docs/aiup/01-inception/vision.md` with a pla
 [How we know we've succeeded]
 ```
 
-Update the "Project Status" section in `docs/aiup/README.md`:
+### 6. Update project status
 
-- Check the "Vision" checkbox
-- Set current phase to "Inception"
-- Set next steps to something sensible
+In `docs/aiup/README.md`, update the "Current Phase" section:
 
-### 5. Clean up
+- Set phase to "Inception"
+- Set next steps based on chosen artifacts (e.g., "Fill in Vision", "Draft Requirements")
+
+### 7. Clean up
 
 Delete this file:
 
@@ -77,8 +101,7 @@ Delete this file:
 rm SETUP.md
 ```
 
-Remove the setup notice from `AGENTS.md` - delete everything between (and including) these
-comment markers:
+Remove the setup notice from `AGENTS.md` - delete everything between (and including):
 
 ```
 <!-- SETUP_NOTICE_START - Delete this block after setup is complete -->
@@ -86,7 +109,7 @@ comment markers:
 <!-- SETUP_NOTICE_END -->
 ```
 
-### 6. Commit
+### 8. Commit
 
 ```bash
 git add -A

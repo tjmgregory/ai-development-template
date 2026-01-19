@@ -5,43 +5,57 @@ development. It's not a rigid framework - adapt it to your needs.
 
 The core idea: **specifications drive code, not the reverse**.
 
-## Flexibility
+---
 
-Decide up front which artifacts you need based on project complexity, team size, and how much
-AI assistance you're using.
+## Choosing Your Artifacts
 
-### Artifact Checklist
+Decide up front which artifacts you need based on project complexity, team size, and domain.
+This choice can evolve - you may add artifacts as the project grows - but it's less iterative
+than the code itself.
 
-#### Core AIUP Artifacts
+The tables below show artifacts by phase. **AIUP** artifacts are the standard set; others come
+from RUP, OpenUP, and modern practices. Pick what fits your project.
 
-These are the standard artifacts defined by the AI Unified Process:
+### Phase 1: Inception
 
-| Artifact | Purpose | When to Include |
-|----------|---------|-----------------|
-| Vision | Align stakeholders on goals | Always recommended |
-| Requirements Catalogue | Document what the system must do | Always recommended |
-| Test Strategy | Define testing approach | Recommended for anything non-trivial |
-| Entity Model | Define data structures | Recommended if you have domain objects |
-| System Use Cases | Define actor-goal interactions | Recommended for user-facing systems |
-| Software Architecture | Define technical structure | Recommended for multi-component systems |
-| Acceptance Tests | Define "done" criteria | Always recommended |
+| Artifact | Source | Recommended | Purpose |
+|----------|--------|-------------|---------|
+| Vision | AIUP | Yes | Goals, scope boundaries, success criteria |
+| Requirements Catalogue | AIUP | Yes | Functional and non-functional requirements |
+| Test Strategy | AIUP | Yes | Test levels, types, environments, responsibilities |
+| Stakeholder Map | RUP | Sometimes | Who cares about this project and why |
+| Business Case | RUP | Sometimes | Justify investment (enterprise/funded projects) |
+| Risk Register | RUP/OpenUP | Sometimes | Track and mitigate significant unknowns |
+| Glossary | RUP | Sometimes | Domain terminology (complex domains) |
 
-#### Additional Artifacts (from UP Derivatives)
+### Phase 2: Elaboration
 
-These come from RUP, OpenUP, and other Unified Process variants. Consider adding them based
-on your project's needs:
+| Artifact | Source | Recommended | Purpose |
+|----------|--------|-------------|---------|
+| Entity Model | AIUP | Yes | Core business concepts, attributes, relationships |
+| System Use Cases | AIUP | Yes | Actor-goal interactions |
+| Software Architecture | AIUP | Yes | Components, responsibilities, technical decisions |
+| Acceptance Tests | AIUP | Yes | "Done" criteria from business perspective |
+| Supplementary Spec | RUP | Sometimes | Detailed non-functional requirements |
+| ADRs | Modern | Sometimes | Record architectural decisions with rationale |
+| API Specification | Modern | Sometimes | OpenAPI/contracts for integrations |
+| Deployment Diagram | RUP | Sometimes | Visualise infrastructure topology |
 
-| Artifact | Source | Purpose | When to Consider |
-|----------|--------|---------|------------------|
-| Glossary | RUP | Define domain terminology | Complex domains, multiple stakeholders |
-| Risk Register | RUP/OpenUP | Track and mitigate risks | Projects with significant unknowns |
-| Stakeholder Map | RUP | Document who cares and why | Multi-stakeholder projects |
-| Supplementary Spec | RUP | Detail non-functional requirements | Performance/security-critical systems |
-| ADRs | Modern practice | Record architectural decisions | Long-lived systems, team handovers |
-| API Specification | - | Define contracts (OpenAPI, etc.) | API-first projects, integrations |
-| Deployment Diagram | RUP | Visualise infrastructure | Complex deployment topologies |
-| Iteration Plan | OpenUP | Plan work for each iteration | Larger teams, time-boxed delivery |
-| Business Case | RUP | Justify the project investment | Enterprise projects, funding approval |
+### Phase 3: Construction
+
+| Artifact | Source | Recommended | Purpose |
+|----------|--------|-------------|---------|
+| Code | AIUP | Yes | The implementation |
+| Tests | AIUP | Yes | Unit, integration, E2E tests |
+| Iteration Plan | OpenUP | Sometimes | Plan work for time-boxed iterations |
+
+### Phase 4: Transition
+
+| Artifact | Source | Recommended | Purpose |
+|----------|--------|-------------|---------|
+| UAT Results | AIUP | Sometimes | User acceptance testing outcomes |
+| Deployment Runbook | RUP | Sometimes | How to deploy and rollback |
+| Improvement Log | Modern | Sometimes | Track learnings and feedback |
 
 ### Minimum Viable AIUP
 
@@ -51,6 +65,8 @@ For simple projects, you might only need:
 2. **Requirements** (bullet list)
 3. **Acceptance Tests** (how you know it works)
 
+Everything else is scaffolding that helps when complexity grows.
+
 ---
 
 ## The Four Phases
@@ -59,33 +75,15 @@ For simple projects, you might only need:
 
 **Purpose**: Establish foundation - what are we building and why?
 
-**Artifacts**:
-
-- **Vision** - Goals, objectives, scope boundaries, success criteria
-- **Requirements Catalogue** - Functional and non-functional requirements, each testable and
-  traceable to business value
-- **Test Strategy** - Test levels, types, environments, tooling, responsibilities
-
 **Tips**:
 
 - Write requirements yourself first, then ask AI to identify gaps
 - Thinking about testing early forces you to think about system boundaries
 - Requirements describe needs ("persist data reliably"), not solutions ("use PostgreSQL")
 
----
-
 ### Phase 2: Elaboration
 
 **Purpose**: Design the system - how will it work?
-
-**Artifacts**:
-
-- **Entity Model** - Core business concepts, attributes, relationships. Use domain language,
-  not technical jargon. Mermaid diagrams work well.
-- **System Use Cases** - Actor-goal interactions. Each should pass the "actor test": would
-  someone initiate this to achieve a specific goal?
-- **Software Architecture** - Components, responsibilities, interactions, key technical decisions
-- **Acceptance Tests** - Specific test cases encoding "done" from a business perspective
 
 **Tips**:
 
@@ -95,13 +93,9 @@ For simple projects, you might only need:
 - The "So What?" test: if you can't articulate user value, it's probably infrastructure
 - Acceptance tests are your safety net for AI regeneration
 
----
-
 ### Phase 3: Construction
 
 **Purpose**: Build it.
-
-**Outputs**: Code and tests (in your source directories, not here)
 
 **The AIUP difference**:
 
@@ -116,13 +110,9 @@ For simple projects, you might only need:
 - Code is regenerable - don't be precious about it
 - When reality diverges from specs, update specs first
 
----
-
 ### Phase 4: Transition
 
 **Purpose**: Ship it and improve.
-
-**Activities**: UAT, deployment, feedback collection, continuous improvement
 
 **The loop**:
 
@@ -136,29 +126,44 @@ Transition → Feedback → New Requirements → Inception → ... (repeat)
 
 <!-- Update this as you work -->
 
-**Core AIUP artifacts in use**:
+### Artifacts in Use
+
+Check the artifacts you're using. Add more as the project evolves.
+
+**Inception**:
 
 - [ ] Vision
 - [ ] Requirements Catalogue
 - [ ] Test Strategy
+- [ ] Stakeholder Map
+- [ ] Business Case
+- [ ] Risk Register
+- [ ] Glossary
+
+**Elaboration**:
+
 - [ ] Entity Model
 - [ ] System Use Cases
 - [ ] Software Architecture
 - [ ] Acceptance Tests
-
-**Additional artifacts in use** (optional):
-
-- [ ] Glossary
-- [ ] Risk Register
-- [ ] Stakeholder Map
 - [ ] Supplementary Spec
 - [ ] ADRs
 - [ ] API Specification
 - [ ] Deployment Diagram
-- [ ] Iteration Plan
-- [ ] Business Case
 
-**Current phase**: Inception (not started)
+**Construction**:
+
+- [ ] Iteration Plan
+
+**Transition**:
+
+- [ ] UAT Results
+- [ ] Deployment Runbook
+- [ ] Improvement Log
+
+### Current Phase
+
+**Phase**: Inception (not started)
 
 **Next steps**:
 
