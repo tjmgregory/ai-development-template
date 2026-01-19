@@ -10,7 +10,11 @@ The core idea: **specifications drive code, not the reverse**.
 Decide up front which artifacts you need based on project complexity, team size, and how much
 AI assistance you're using.
 
-### Customisation Checklist
+### Artifact Checklist
+
+#### Core AIUP Artifacts
+
+These are the standard artifacts defined by the AI Unified Process:
 
 | Artifact | Purpose | When to Include |
 |----------|---------|-----------------|
@@ -21,6 +25,23 @@ AI assistance you're using.
 | System Use Cases | Define actor-goal interactions | Recommended for user-facing systems |
 | Software Architecture | Define technical structure | Recommended for multi-component systems |
 | Acceptance Tests | Define "done" criteria | Always recommended |
+
+#### Additional Artifacts (from UP Derivatives)
+
+These come from RUP, OpenUP, and other Unified Process variants. Consider adding them based
+on your project's needs:
+
+| Artifact | Source | Purpose | When to Consider |
+|----------|--------|---------|------------------|
+| Glossary | RUP | Define domain terminology | Complex domains, multiple stakeholders |
+| Risk Register | RUP/OpenUP | Track and mitigate risks | Projects with significant unknowns |
+| Stakeholder Map | RUP | Document who cares and why | Multi-stakeholder projects |
+| Supplementary Spec | RUP | Detail non-functional requirements | Performance/security-critical systems |
+| ADRs | Modern practice | Record architectural decisions | Long-lived systems, team handovers |
+| API Specification | - | Define contracts (OpenAPI, etc.) | API-first projects, integrations |
+| Deployment Diagram | RUP | Visualise infrastructure | Complex deployment topologies |
+| Iteration Plan | OpenUP | Plan work for each iteration | Larger teams, time-boxed delivery |
+| Business Case | RUP | Justify the project investment | Enterprise projects, funding approval |
 
 ### Minimum Viable AIUP
 
@@ -115,7 +136,7 @@ Transition → Feedback → New Requirements → Inception → ... (repeat)
 
 <!-- Update this as you work -->
 
-**Artifacts in use**:
+**Core AIUP artifacts in use**:
 
 - [ ] Vision
 - [ ] Requirements Catalogue
@@ -124,6 +145,18 @@ Transition → Feedback → New Requirements → Inception → ... (repeat)
 - [ ] System Use Cases
 - [ ] Software Architecture
 - [ ] Acceptance Tests
+
+**Additional artifacts in use** (optional):
+
+- [ ] Glossary
+- [ ] Risk Register
+- [ ] Stakeholder Map
+- [ ] Supplementary Spec
+- [ ] ADRs
+- [ ] API Specification
+- [ ] Deployment Diagram
+- [ ] Iteration Plan
+- [ ] Business Case
 
 **Current phase**: Inception (not started)
 
