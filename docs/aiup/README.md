@@ -16,6 +16,11 @@ than the code itself.
 The tables below show artifacts by phase. **AIUP** artifacts are the standard set; others come
 from RUP, OpenUP, and modern practices. Pick what fits your project.
 
+**Note**: These lists aren't exhaustive. Depending on your domain, you may need additional
+documents not listed here (compliance artifacts, domain-specific specs, regulatory submissions,
+etc.). Research what's typical for your industry, or discuss with your AI agent what other
+documentation might be valuable for your specific project.
+
 ### Phase 1: Inception
 
 | Artifact | Source | Recommended | Purpose |
