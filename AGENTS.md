@@ -3,6 +3,13 @@
 This document provides essential guidelines for AI agents working on this project.
 **Read this document at the start of every session.**
 
+<!-- SETUP_NOTICE_START - Delete this block after setup is complete -->
+
+> **First time?** If `SETUP.md` exists in this repo, read and follow it first.
+> It will guide you through initialising the project and then self-destruct.
+
+<!-- SETUP_NOTICE_END -->
+
 ---
 
 ## 1. AI Unified Process (AIUP)
@@ -45,21 +52,6 @@ methodology where specifications drive code, not the reverse.
 
 This project uses **beads (bd)** for all issue tracking. Do NOT use markdown TODOs or other
 tracking methods.
-
-### Setup (one-time)
-
-If beads isn't initialised yet:
-
-```bash
-bd init
-bd doctor --fix
-```
-
-For repos with a **protected main branch**, configure beads to sync on a separate branch:
-
-```bash
-bd config set sync_branch beads-sync
-```
 
 ### Quick Reference
 
