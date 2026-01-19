@@ -16,11 +16,10 @@
 This project follows the **AI Unified Process** - an iterative, requirements-driven development
 methodology where specifications drive code, not the reverse.
 
-**Before doing any work**, read `docs/aiup/README.md` for:
+**Before doing any work**:
 
-- Which artifacts this project uses
-- Current phase and status
-- What to work on next
+- Read `docs/aiup/README.md` for which artifacts this project uses
+- Run `bd ready --json` to see what to work on next
 
 ### Core Principles
 

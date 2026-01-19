@@ -54,7 +54,25 @@ Update the "Artifacts in Use" checklist in `docs/aiup/README.md` to reflect thei
 
 This can evolve later - artifacts can be added as the project grows.
 
-### 5. Create inception directory
+### 5. Create Inception epic in beads
+
+Create an epic for the Inception phase with tasks for each chosen artifact:
+
+```bash
+bd create "Inception" -t epic -p 1 --json
+```
+
+Then create tasks for each Inception artifact they chose, e.g.:
+
+```bash
+bd create "Write Vision" -t task -p 1 --json
+bd create "Draft Requirements Catalogue" -t task -p 1 --json
+bd create "Define Test Strategy" -t task -p 1 --json
+```
+
+Link them to the epic as appropriate.
+
+### 6. Create inception directory
 
 Create `docs/aiup/01-inception/` for the inception artifacts.
 
@@ -86,14 +104,11 @@ If Vision was selected (it usually is), create `docs/aiup/01-inception/vision.md
 [How we know we've succeeded]
 ```
 
-### 6. Update project status
+### 7. Update project status
 
-In `docs/aiup/README.md`, update the "Current Phase" section:
+In `docs/aiup/README.md`, set "Current Phase" to "Inception".
 
-- Set phase to "Inception"
-- Set next steps based on chosen artifacts (e.g., "Fill in Vision", "Draft Requirements")
-
-### 7. Clean up
+### 8. Clean up
 
 Delete this file:
 
@@ -109,7 +124,7 @@ Remove the setup notice from `AGENTS.md` - delete everything between (and includ
 <!-- SETUP_NOTICE_END -->
 ```
 
-### 8. Commit
+### 9. Commit
 
 ```bash
 git add -A
