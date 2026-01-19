@@ -45,8 +45,7 @@ Read `AGENTS.md` before starting work. It covers:
 
 ### Claude Code Users
 
-Install the [beads plugin](https://github.com/steveyegge/beads/tree/main/claude-plugin)
-for better issue tracking integration.
+`claude plugin install beads` - see [beads plugin](https://github.com/steveyegge/beads/tree/main/claude-plugin)
 
 ## License
 

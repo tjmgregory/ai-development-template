@@ -59,8 +59,8 @@ Run `bd quickstart` for more.
 
 ### Claude Code Plugin
 
-For Claude Code users, install the [beads plugin](https://github.com/steveyegge/beads/tree/main/claude-plugin)
-for agents, commands, and skills that improve issue tracking.
+For Claude Code users: `claude plugin install beads` or see the
+[beads plugin](https://github.com/steveyegge/beads/tree/main/claude-plugin) docs.
 
 ---
 
