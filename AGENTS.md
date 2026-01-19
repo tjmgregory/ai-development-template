@@ -57,6 +57,20 @@ bd close <id> -r "Done" --json               # Complete (after pushed)
 
 Run `bd quickstart` for more.
 
+### Claude Code Skill
+
+If you're using Claude Code, install the beads skill for better issue tracking support:
+
+```bash
+# Global installation
+cp -r <path-to-beads>/claude-plugin/skills/beads ~/.claude/skills/
+
+# Or project-local
+cp -r <path-to-beads>/claude-plugin/skills/beads .claude/skills/
+```
+
+See: [beads skill](https://github.com/steveyegge/beads/tree/main/claude-plugin/skills/beads)
+
 ---
 
 ## References
