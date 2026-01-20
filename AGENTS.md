@@ -39,7 +39,8 @@ methodology where specifications drive code, not the reverse.
 
 ## Issue Tracking (beads)
 
-This project uses **beads (bd)** for all issue tracking.
+This project uses **beads (bd)** for **all** issue tracking. Documents define what to build;
+beads tracks the work.
 
 ```bash
 bd ready --json                              # What's ready to work on
@@ -53,6 +54,15 @@ bd close <id> -r "Done" --json               # Complete (after pushed)
 **Priorities**: `0` (critical) → `4` (backlog)
 
 Run `bd quickstart` for more.
+
+### Sub-agents and Handoffs
+
+When deferring work to sub-agents or handing off to another session:
+
+- **Create tickets first**: Break work into beads issues before spawning sub-agents
+- **One ticket per unit of work**: Each sub-agent should work on a tracked issue
+- **Update status**: Mark issues `in_progress` when starting, `closed` when done
+- **No silent work**: If it's worth doing, it's worth tracking
 
 ### Claude Code Plugin
 

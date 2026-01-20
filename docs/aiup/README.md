@@ -217,14 +217,15 @@ Check the artifacts you're using. Add more as the project evolves.
 - [ ] Deployment Runbook
 - [ ] Improvement Log
 
-### Current Phase
+### Current Status
 
-**Phase**: Inception (not started)
+**Do not track phase or progress here.** Use beads:
 
-**Next steps**:
-
-1. [First thing to do]
-2. [Second thing to do]
+```bash
+bd ready --json    # What's ready to work on
+bd list --json     # All issues
+bd stats           # Progress overview
+```
 
 ---
 
