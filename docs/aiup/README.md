@@ -77,9 +77,11 @@ Everything else is scaffolding that helps when complexity grows.
 Templates for key documents are in [`templates/`](templates/):
 
 - [`vision.md`](templates/vision.md) - Goals, scope, success criteria
-- [`requirements.md`](templates/requirements.md) - Functional and non-functional requirements with identifiers
+- [`requirements-catalogue.md`](templates/requirements-catalogue.md) - Functional and non-functional requirements with identifiers
 
 Use identifiers (REQ-001, NFR-001, G-001) for traceability across artifacts.
+
+**Naming convention**: Filenames should match document titles in kebab-case (e.g., "Requirements Catalogue" → `requirements-catalogue.md`).
 
 ---
 
