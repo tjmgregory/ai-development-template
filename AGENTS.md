@@ -9,14 +9,14 @@
 
 ---
 
-## AI Unified Process (AIUP)
+## Unified Process
 
-This project follows the **AI Unified Process** - an iterative, requirements-driven development
+This project follows the **Unified Process (UP)** - an iterative, requirements-driven development
 methodology where specifications drive code, not the reverse.
 
 **Before doing any work**:
 
-- Read `docs/aiup/README.md` for which artifacts this project uses
+- Read `docs/process/README.md` for which artifacts this project uses
 - Run `bd ready --json` to see what to work on next
 
 ### Core Principles
@@ -73,6 +73,7 @@ For Claude Code users: `claude plugin install beads` or see the
 
 ## References
 
-- [AIUP](https://aiup.dev/)
-- [beads](https://github.com/steveyegge/beads)
-- `docs/aiup/README.md` - Project configuration
+- [Unified Process](https://en.wikipedia.org/wiki/Unified_process) - Process overview
+- [AIUP](https://aiup.dev/) - AI-optimised UP variant (basis for recommended artifacts)
+- [beads](https://github.com/steveyegge/beads) - Issue tracking
+- `docs/process/README.md` - Project configuration

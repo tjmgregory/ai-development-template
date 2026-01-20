@@ -1,9 +1,10 @@
-# AI Unified Process (AIUP)
+# Unified Process
 
-AIUP is a **suggested implementation** of the Unified Process (UP), adapted for AI-assisted
-development. It's not a rigid framework - adapt it to your needs.
+This project follows the **Unified Process (UP)** - an iterative, requirements-driven development
+methodology where specifications drive code, not the reverse.
 
-The core idea: **specifications drive code, not the reverse**.
+The recommended artifacts here are aligned with [AIUP](https://aiup.dev/) (AI Unified Process),
+a UP variant optimised for AI-assisted development.
 
 ---
 
@@ -13,13 +14,12 @@ Decide up front which artifacts you need based on project complexity, team size,
 This choice can evolve - you may add artifacts as the project grows - but it's less iterative
 than the code itself.
 
-The tables below show artifacts by phase. **AIUP** artifacts are the standard set; others come
+The tables below show artifacts by phase. Recommended artifacts align with AIUP; others come
 from RUP, OpenUP, and modern practices. Pick what fits your project.
 
 **Note**: These lists aren't exhaustive. Depending on your domain, you may need additional
 documents not listed here (compliance artifacts, domain-specific specs, regulatory submissions,
-etc.). Research what's typical for your industry, or discuss with your AI agent what other
-documentation might be valuable for your specific project.
+etc.). See the [References](#references) section for resources on other artifacts you might find useful.
 
 ### Phase 1: Inception
 
@@ -50,19 +50,19 @@ documentation might be valuable for your specific project.
 
 | Artifact | Source | Recommended | Purpose |
 |----------|--------|-------------|---------|
-| Code | AIUP | Yes | The implementation |
-| Tests | AIUP | Yes | Unit, integration, E2E tests |
+| Code | - | Yes | The implementation |
+| Tests | - | Yes | Unit, integration, E2E tests |
 | Iteration Plan | OpenUP | Sometimes | Plan work for time-boxed iterations |
 
 ### Phase 4: Transition
 
 | Artifact | Source | Recommended | Purpose |
 |----------|--------|-------------|---------|
-| UAT Results | AIUP | Sometimes | User acceptance testing outcomes |
+| UAT Results | - | Sometimes | User acceptance testing outcomes |
 | Deployment Runbook | RUP | Sometimes | How to deploy and rollback |
 | Improvement Log | Modern | Sometimes | Track learnings and feedback |
 
-### Minimum Viable AIUP
+### Minimum Viable Process
 
 For simple projects, you might only need:
 
@@ -153,7 +153,7 @@ This ensures changes are tracked and nothing is forgotten.
 
 **Purpose**: Build it.
 
-**The AIUP difference**:
+**With AI-assisted development**:
 
 1. AI generates tests from use cases
 2. Humans review tests
@@ -178,9 +178,7 @@ Transition → Feedback → New Requirements → Inception → ... (repeat)
 
 ---
 
-## Project Status
-
-<!-- Update this as you work -->
+## Project Configuration
 
 ### Artifacts in Use
 
@@ -231,6 +229,14 @@ bd stats           # Progress overview
 
 ## References
 
-- [AIUP Official Site](https://aiup.dev/)
-- [Unified Process (Wikipedia)](https://en.wikipedia.org/wiki/Unified_Process)
-- [Writing Effective Use Cases (Cockburn)](https://www.amazon.com/Writing-Effective-Cases-Alistair-Cockburn/dp/0201702258)
+### Process Guides
+
+- [AIUP](https://aiup.dev/) - AI Unified Process, the basis for recommended artifacts here
+- [Unified Process (Wikipedia)](https://en.wikipedia.org/wiki/Unified_process) - Overview of UP variants
+- [OpenUP (Eclipse)](https://www.eclipse.org/epf/general/OpenUP.pdf) - Lightweight UP variant with templates
+
+### Artifact Resources
+
+- [RUP Templates](https://files.defcon.no/RUP/process/templates.htm) - Comprehensive artifact templates from Rational
+- [RUP Artifacts by Phase](https://blog.softelegance.com/rup/rup-artefacts-in-a-context-of-phases/) - Which artifacts belong where
+- [Writing Effective Use Cases (Cockburn)](https://www.amazon.com/Writing-Effective-Cases-Alistair-Cockburn/dp/0201702258) - The definitive book on use cases
