@@ -8,6 +8,58 @@ a UP variant optimised for AI-assisted development.
 
 ---
 
+## Traceability
+
+**Every document should use identifiers.** This is a core tenet.
+
+Identifiers (e.g., `G-001`, `REQ-001`, `UC-001`, `TC-001`) create traceability between artifacts.
+When something changes, you search for its identifier to find everything that references it.
+
+### The Document Hierarchy
+
+Documents form a natural hierarchy. Higher-level documents are referenced by lower-level ones:
+
+```
+Vision (G-001, G-002...)
+    ↓
+Requirements (REQ-001, REQ-002...)
+    ↓
+Use Cases (UC-001, UC-002...)
+    ↓
+Tests (TC-001, TC-002...)
+    ↓
+Code
+```
+
+### The Cascade Principle
+
+**Changes flow downward.** When you change a document:
+
+1. Everything that references its identifiers may need updating
+2. Everything that references *those* documents may need updating
+3. This cascade continues down the hierarchy
+
+Changing a goal (`G-001`) may affect requirements, use cases, tests, and code.
+Changing a test (`TC-001`) only affects code - nothing above it references it.
+
+**Lower-level changes don't ripple upward.** Refactoring code doesn't change the requirements.
+Fixing a test doesn't change the use case. The hierarchy is directional.
+
+### Identifier Conventions
+
+| Prefix | Document | Example |
+|--------|----------|---------|
+| G- | Vision / Goals | G-001 |
+| REQ- | Functional Requirements | REQ-001 |
+| NFR- | Non-Functional Requirements | NFR-001 |
+| UC- | Use Cases | UC-001 |
+| TC- | Test Cases | TC-001 |
+| ADR- | Architecture Decision Records | ADR-001 |
+
+Use whatever prefixes make sense for your project. Consistency matters more than convention.
+
+---
+
 ## Choosing Your Artifacts
 
 Decide up front which artifacts you need based on project complexity, team size, and domain.
@@ -77,9 +129,7 @@ Everything else is scaffolding that helps when complexity grows.
 Templates for key documents are in [`templates/`](templates/):
 
 - [`vision.md`](templates/vision.md) - Goals, scope, success criteria
-- [`requirements-catalogue.md`](templates/requirements-catalogue.md) - Functional and non-functional requirements with identifiers
-
-Use identifiers (REQ-001, NFR-001, G-001) for traceability across artifacts.
+- [`requirements-catalogue.md`](templates/requirements-catalogue.md) - Functional and non-functional requirements
 
 **Naming convention**: Filenames should match document titles in kebab-case (e.g., "Requirements Catalogue" → `requirements-catalogue.md`).
 
@@ -104,24 +154,26 @@ needs doing.
    ```
 4. **Work is tracked in beads**, not the document
 
-### When Requirements Change
+### When Documents Change
 
-When a requirement changes, there's a natural cascade:
+When any document changes, apply the cascade principle:
 
-1. **Update the requirement document first** (specs are source of truth)
-2. **Search for the requirement ID** to find affected artifacts
-3. **Create tickets for updates**:
+1. **Update the document** (specs are source of truth)
+2. **Search for the identifier** to find all references
+3. **Create tickets for each affected artifact**:
    ```bash
+   # Example: REQ-001 changed
    bd create "Update UC-003 for REQ-001 change" -t task -p 2
-   bd create "Update tests for REQ-001 change" -t task -p 2
+   bd create "Update TC-007 for REQ-001 change" -t task -p 2
    bd create "Update implementation for REQ-001 change" -t task -p 2
    ```
-4. **Link the tickets** if they have dependencies:
+4. **Link tickets** if they have dependencies:
    ```bash
    bd dep add <impl-ticket> --blocked-by <test-ticket>
    ```
 
-This ensures changes are tracked and nothing is forgotten.
+The higher in the hierarchy the change, the more tickets you'll create.
+A vision change may cascade through everything; a test change may only need a code fix.
 
 ---
 
