@@ -38,9 +38,9 @@ Read `AGENTS.md` before starting work. It covers:
 
 ### For Humans
 
-1. Check `docs/unified-process/README.md` for current project status
-2. Use `bd ready` to see available work
-3. Claim issues with `bd update <id> --status in_progress` before starting
+1. Use `bd ready` to see available work (beads tracks all status/progress)
+2. Claim issues with `bd update <id> --status in_progress` before starting
+3. See `docs/unified-process/` for specs and requirements
 4. Follow existing specs; update them if reality diverges
 
 ### Claude Code Users
