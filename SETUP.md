@@ -56,7 +56,7 @@ This can evolve later - artifacts can be added as the project grows.
 
 ### 5. Create Inception epic in beads
 
-Create an epic for the Inception phase with tasks for each chosen artifact:
+Create an epic for the Inception phase with tasks for **writing** each chosen artifact:
 
 ```bash
 bd create "Inception" -t epic -p 1 --json
@@ -72,43 +72,19 @@ bd create "Define Test Strategy" -t task -p 1 --json
 
 Link them to the epic as appropriate.
 
-### 6. Create inception directory
+**Important**: These tickets are for *writing the documents*, not implementing features.
+Do not auto-generate the document content - the human writes it.
 
-Create `docs/aiup/01-inception/` for the inception artifacts.
+Use templates from `docs/aiup/templates/` as starting points.
 
-If Vision was selected (it usually is), create `docs/aiup/01-inception/vision.md`:
+Once a document is written and approved, *new* tickets are created for the implementation
+work (see "Documents vs Tickets" in `docs/aiup/README.md`).
 
-```markdown
-# Vision
-
-<!-- Fill this in to establish project direction -->
-
-## Problem Statement
-
-[What problem are we solving?]
-
-## Solution Overview
-
-[High-level description]
-
-## Goals
-
-- [Goal 1]
-
-## Non-Goals
-
-- [What we're explicitly not doing]
-
-## Success Criteria
-
-[How we know we've succeeded]
-```
-
-### 7. Update project status
+### 6. Update project status
 
 In `docs/aiup/README.md`, set "Current Phase" to "Inception".
 
-### 8. Clean up
+### 7. Clean up
 
 Delete this file:
 
@@ -124,7 +100,7 @@ Remove the setup notice from `AGENTS.md` - delete everything between (and includ
 <!-- SETUP_NOTICE_END -->
 ```
 
-### 9. Commit
+### 8. Commit
 
 ```bash
 git add -A

@@ -72,6 +72,55 @@ For simple projects, you might only need:
 
 Everything else is scaffolding that helps when complexity grows.
 
+### Templates
+
+Templates for key documents are in [`templates/`](templates/):
+
+- [`vision.md`](templates/vision.md) - Goals, scope, success criteria
+- [`requirements.md`](templates/requirements.md) - Functional and non-functional requirements with identifiers
+
+Use identifiers (REQ-001, NFR-001, G-001) for traceability across artifacts.
+
+---
+
+## Documents vs Tickets
+
+**Documents** (specs, requirements, vision) define *what* to build. They are reference
+material, not work tracking.
+
+**Tickets** (beads issues) track *work to do*. Beads is the source of truth for what
+needs doing.
+
+### The Workflow
+
+1. **Write the document** (e.g., requirements catalogue)
+2. **Human reviews and approves** the document
+3. **Create tickets from the document**:
+   ```bash
+   bd create "Implement REQ-001: User login" -t feature -p 2
+   bd create "Implement REQ-002: Password reset" -t feature -p 2
+   ```
+4. **Work is tracked in beads**, not the document
+
+### When Requirements Change
+
+When a requirement changes, there's a natural cascade:
+
+1. **Update the requirement document first** (specs are source of truth)
+2. **Search for the requirement ID** to find affected artifacts
+3. **Create tickets for updates**:
+   ```bash
+   bd create "Update UC-003 for REQ-001 change" -t task -p 2
+   bd create "Update tests for REQ-001 change" -t task -p 2
+   bd create "Update implementation for REQ-001 change" -t task -p 2
+   ```
+4. **Link the tickets** if they have dependencies:
+   ```bash
+   bd dep add <impl-ticket> --blocked-by <test-ticket>
+   ```
+
+This ensures changes are tracked and nothing is forgotten.
+
 ---
 
 ## The Four Phases
