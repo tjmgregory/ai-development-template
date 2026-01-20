@@ -18,10 +18,10 @@ npm run dev
 
 ## Development
 
-This project follows the [Unified Process](docs/process/README.md) methodology.
+This project follows the [Unified Process](docs/unified-process/README.md) methodology.
 
 - **AI agents**: Read `AGENTS.md` at the start of each session
-- **Process docs**: See `docs/process/` for requirements, specifications, and project configuration
+- **Process docs**: See `docs/unified-process/` for requirements, specifications, and project configuration
 
 ## Contributing
 
@@ -38,7 +38,7 @@ Read `AGENTS.md` before starting work. It covers:
 
 ### For Humans
 
-1. Check `docs/process/README.md` for current project status
+1. Check `docs/unified-process/README.md` for current project status
 2. Use `bd ready` to see available work
 3. Claim issues with `bd update <id> --status in_progress` before starting
 4. Follow existing specs; update them if reality diverges

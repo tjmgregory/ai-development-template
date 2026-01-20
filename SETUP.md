@@ -35,7 +35,7 @@ bd config set sync_branch beads-sync
 
 ### 4. Choose artifacts
 
-Walk through `docs/process/README.md` with the user to decide which artifacts they'll use.
+Walk through `docs/unified-process/README.md` with the user to decide which artifacts they'll use.
 
 For each phase, review the artifact table and ask which ones apply to this project. Consider:
 
@@ -50,7 +50,7 @@ For each phase, review the artifact table and ask which ones apply to this proje
 - Requirements Catalogue
 - Acceptance Tests
 
-Update the "Artifacts in Use" checklist in `docs/process/README.md` to reflect their choices.
+Update the "Artifacts in Use" checklist in `docs/unified-process/README.md` to reflect their choices.
 
 This can evolve later - artifacts can be added as the project grows.
 
@@ -75,14 +75,14 @@ Link them to the epic as appropriate.
 **Important**: These tickets are for *writing the documents*, not implementing features.
 Do not auto-generate the document content - the human writes it.
 
-Use templates from `docs/process/templates/` as starting points.
+Use templates from `docs/unified-process/templates/` as starting points.
 
 Once a document is written and approved, *new* tickets are created for the implementation
-work (see "Documents vs Tickets" in `docs/process/README.md`).
+work (see "Documents vs Tickets" in `docs/unified-process/README.md`).
 
 ### 6. Update project status
 
-In `docs/process/README.md`, set "Current Phase" to "Inception".
+In `docs/unified-process/README.md`, set "Current Phase" to "Inception".
 
 ### 7. Clean up
 

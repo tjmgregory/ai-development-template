@@ -16,7 +16,7 @@ methodology where specifications drive code, not the reverse.
 
 **Before doing any work**:
 
-- Read `docs/process/README.md` for which artifacts this project uses
+- Read `docs/unified-process/README.md` for which artifacts this project uses
 - Run `bd ready --json` to see what to work on next
 
 ### Core Principles
@@ -76,4 +76,4 @@ For Claude Code users: `claude plugin install beads` or see the
 - [Unified Process](https://en.wikipedia.org/wiki/Unified_process) - Process overview
 - [AIUP](https://aiup.dev/) - AI-optimised UP variant (basis for recommended artifacts)
 - [beads](https://github.com/steveyegge/beads) - Issue tracking
-- `docs/process/README.md` - Project configuration
+- `docs/unified-process/README.md` - Project configuration
