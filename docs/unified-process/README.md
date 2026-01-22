@@ -238,34 +238,34 @@ Check the artifacts you're using. Add more as the project evolves.
 
 **Inception**:
 
-- [ ] Vision
-- [ ] Requirements Catalogue
-- [ ] Test Strategy
-- [ ] Stakeholder Map
-- [ ] Business Case
-- [ ] Risk Register
-- [ ] Glossary
+- [x] Vision
+- [ ] ~~Requirements Catalogue~~ (using `docs/territory-consolidation-final-report.md` as spec)
+- [ ] ~~Test Strategy~~
+- [ ] ~~Stakeholder Map~~
+- [ ] ~~Business Case~~
+- [ ] ~~Risk Register~~
+- [ ] ~~Glossary~~
 
 **Elaboration**:
 
-- [ ] Entity Model
-- [ ] System Use Cases
-- [ ] Software Architecture
-- [ ] Acceptance Tests
-- [ ] Supplementary Spec
-- [ ] ADRs
-- [ ] API Specification
-- [ ] Deployment Diagram
+- [ ] ~~Entity Model~~
+- [ ] ~~System Use Cases~~
+- [ ] ~~Software Architecture~~
+- [ ] ~~Acceptance Tests~~
+- [ ] ~~Supplementary Spec~~
+- [ ] ~~ADRs~~
+- [ ] ~~API Specification~~
+- [ ] ~~Deployment Diagram~~
 
 **Construction**:
 
-- [ ] Iteration Plan
+- [ ] ~~Iteration Plan~~
 
 **Transition**:
 
-- [ ] UAT Results
-- [ ] Deployment Runbook
-- [ ] Improvement Log
+- [ ] ~~UAT Results~~
+- [ ] ~~Deployment Runbook~~
+- [ ] ~~Improvement Log~~
 
 ### Current Status
 

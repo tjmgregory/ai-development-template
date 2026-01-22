@@ -1,3 +1,7 @@
 .obsidian/
 .beads/
 .claude/
+
+# Working repos (changes pushed to their own origins)
+infra-gitops/
+infrastructure-charts/

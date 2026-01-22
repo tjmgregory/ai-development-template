@@ -1,6 +1,6 @@
-# [Project Name]
+# Territory Consolidation
 
-<!-- Brief description of what this project does -->
+Consolidate Elephant Healthcare's infrastructure territories: merge Kenya into Nigeria (single AWS deployment) and remove dormant territories (Ghana, Lebanon). Pakistan remains separate (RapidCompute).
 
 ## Getting Started
 

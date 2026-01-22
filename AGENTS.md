@@ -1,12 +1,5 @@
 # Agent Guidelines
 
-<!-- SETUP_NOTICE_START - Delete this block after setup is complete -->
-
-> **First time?** If `SETUP.md` exists in this repo, read and follow it first.
-> It will guide you through initialising the project and then self-destruct.
-
-<!-- SETUP_NOTICE_END -->
-
 ---
 
 ## Unified Process
@@ -77,3 +70,29 @@ For Claude Code users: `claude plugin install beads` or see the
 - [AIUP](https://aiup.dev/) - AI-optimised UP variant (basis for recommended artifacts)
 - [beads](https://github.com/steveyegge/beads) - Issue tracking
 - `docs/unified-process/README.md` - Project configuration
+
+## Landing the Plane (Session Completion)
+
+**When ending a work session**, you MUST complete ALL steps below. Work is NOT complete until `git push` succeeds.
+
+**MANDATORY WORKFLOW:**
+
+1. **File issues for remaining work** - Create issues for anything that needs follow-up
+2. **Run quality gates** (if code changed) - Tests, linters, builds
+3. **Update issue status** - Close finished work, update in-progress items
+4. **PUSH TO REMOTE** - This is MANDATORY:
+   ```bash
+   git pull --rebase
+   bd sync
+   git push
+   git status  # MUST show "up to date with origin"
+   ```
+5. **Clean up** - Clear stashes, prune remote branches
+6. **Verify** - All changes committed AND pushed
+7. **Hand off** - Provide context for next session
+
+**CRITICAL RULES:**
+- Work is NOT complete until `git push` succeeds
+- NEVER stop before pushing - that leaves work stranded locally
+- NEVER say "ready to push when you are" - YOU must push
+- If push fails, resolve and retry until it succeeds
